@@ -1,0 +1,52 @@
+.footer-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-family: "Roboto";
+  font-weight: medium;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 154px;
+  padding-top: 72px;  
+  padding-left: 10px;  
+
+  &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 11px;
+      background-color: #bebebe;
+      right: -13px;
+      top: 6px;
+    }
+  }
+
+  &__item--contact {
+    &::after {
+      display: none;
+    }
+  }
+
+
+  &__link {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #bebebe;
+
+    &:hover {
+      color: #adabab;
+    }
+
+    &:active {
+      color: #777575;
+    }
+  }
+}

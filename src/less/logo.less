@@ -1,0 +1,35 @@
+@import "variables.less";
+
+.logo {
+  font-family: "Roboto Black";
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 24px;
+  
+  &__link {
+    text-decoration: none;
+  }
+
+  &__text {
+    color: #f26648;
+    text-transform: uppercase;
+   
+    &--colour-white {
+      color: #fff;
+    }
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .logo {
+    font-size: 16px;
+    line-height: 14px;
+    &__text {
+      color: #f26648;
+      text-transform: uppercase;
+      &--colour-white {
+        color: #fff;
+      }
+    }
+  }
+}

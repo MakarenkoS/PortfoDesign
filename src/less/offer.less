@@ -1,0 +1,59 @@
+@import "variables.less";
+
+.offer {
+  font-family: "Roboto";
+  font-weight: bold;
+  &__title {
+    
+    display: block; 
+    margin: 0;  
+    padding: 0; 
+    text-align: center;   
+    font-size: 106px;
+    text-transform: uppercase;  
+    color: #f26648;
+    line-height: 97px;
+  }
+
+  &__text {
+    display: block; 
+    margin: 0;  
+    padding: 0; 
+    text-align: center;
+    font-size: 42px;
+    color: #ffffff;
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .offer {
+    padding-top: 270px; 
+  
+    &__title {
+      font-size: 55px;
+      line-height: 70px;
+    }
+  
+    &__text {
+      font-size: 24px;
+ 
+    }
+  }
+}
+
+
+@media(max-width: @mobile-width) {
+  .offer {
+    padding-top: 300px; 
+  
+    &__title {
+      font-size: 35px;
+      line-height: 70px;
+    }
+  
+    &__text {
+      font-size: 18px;
+ 
+    }
+  }
+}
