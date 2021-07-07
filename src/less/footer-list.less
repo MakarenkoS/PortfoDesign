@@ -1,3 +1,5 @@
+@import "variables.less";
+
 .footer-list {
   margin: 0;
   padding: 0;
@@ -9,9 +11,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 154px;
-  padding-top: 72px;  
-  padding-left: 10px;  
+
 
   &__item {
     position: relative;
@@ -47,6 +47,25 @@
 
     &:active {
       color: #777575;
+    }
+  }
+}
+
+@media(max-width: @tablet-width) {
+  .footer-list {
+    &__link {
+      font-size: 10px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media(max-width: @mobile-width) {
+  .footer-list {
+    &__item {
+      &::after {
+        display: none;
+      }
     }
   }
 }

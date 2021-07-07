@@ -1,17 +1,16 @@
+@import "variables.less";
+
 .copyright {
 
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center;
   font-family: "Roboto";
   font-weight: medium;
   font-size: 12px;
   line-height: 24px;
   color: #bebebe;
   text-transform: uppercase;
-  min-height: 155px;
-  /*max-height: 155px;*/
 
 
   &__link {
@@ -22,5 +21,13 @@
       color: #db5133;
     }
   }
+}
 
+@media(max-width: @tablet-width) {
+  .copyright {
+    font-size: 8px;
+  
+    display: block;
+    text-align: center;
+  }
 }

@@ -1,19 +1,20 @@
+@import "variables.less";
+
 .about {
   background-color: #eee5dc;
   background-image: url("../img/about-background.jpg");
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-
   font-family: "Roboto";
   font-weight: medium;
   
   &__title {
     margin: 0;
     padding: 0;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     position: relative;
     margin-top: 100px;
@@ -39,10 +40,11 @@
   &__describe {
     margin: 0;
     padding: 0;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     margin-top: 44px;
     padding-right: 30px;
+    padding-left: 30px;
     font-size: 14px;
     line-height: 24px;
     color: #fff;
@@ -51,12 +53,21 @@
   &__social {
     margin: 0;
     padding: 0;
-    width: 1170px;
+    max-width: 1170px;
     margin: 0 auto;
     margin-top: 32px;
     margin-bottom: 112px;
   }
 }
 
-
-
+@media(max-width: @tablet-width) {
+  .about {
+    &__title {
+      margin-top: 70px;
+      line-height: 30px;
+    }
+    &__social {
+      margin-top: 70px;
+    }
+  }
+}

@@ -1,6 +1,7 @@
+@import "variables.less";
+
 .feedback-form {
-  width: 1170px;
-  padding-bottom: 80px;
+  width: 100%;
 
   &__wrapper {
     margin: 0;
@@ -54,5 +55,11 @@
 
   &__button {
     margin-top: 38px;
+  }
+}
+
+@media(max-width: @tablet-width2) {
+  .feedback-form {
+    text-align: center;
   }
 }

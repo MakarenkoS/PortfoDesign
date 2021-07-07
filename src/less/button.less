@@ -1,3 +1,5 @@
+@import "variables.less";
+
 .button {
   font-family: "Roboto";
   font-weight: normal;
@@ -18,5 +20,11 @@
   &:active {
     background-color: #c2462b;
     color: #f3b7aa;
+  }
+}
+
+@media(max-width: @tablet-width2) {
+  .button {
+    padding: 18px 30%;
   }
 }
