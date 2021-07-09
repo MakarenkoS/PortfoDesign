@@ -66,11 +66,17 @@ gulp.task('img', function(){
 		return gulp.src('./src/img/**/*.{png,jpg,svg}')
 
 					.pipe(imagemin([
-						imagemin.optipng({optimizationLevel: 3}),
+						imagemin.optipng({quality: 55, optimizationLevel: 5}),
 						imagemin.jpegtran({progressive: true}),
 						imagemin.svgo()
 					]))
 					.pipe(gulp.dest('./dest/img/'));
+
+})
+
+gulp.task('js', function(){
+  return gulp.src('./src/js/*.*')
+        .pipe(gulp.dest('./dest/js/'));
 
 })
 
@@ -80,12 +86,15 @@ gulp.task('server', function() {
 
 		server: {baseDir: './dest',
 						 index: 'index.html'},
-        		 browser: 'firefox'
+        		 browser: 'chrome'
 
 	});
   gulp.watch('src/**/*.html').on('change', gulp.series('html'));
 	gulp.watch('dest/**/*.html').on('change', browserSync.reload);
-	// gulp.watch('src/**/*.css').on('change', browserSync.reload);
+  // gulp.watch('src/**/*.css').on('change', browserSync.reload);
+  
+  gulp.watch('src/js/*.js').on('change', gulp.series('js'));
+	gulp.watch('dest/**/*.js').on('change', browserSync.reload);
 
 	// gulp.watch('src/**/*.js').on('change', browserSync.reload);
 	gulp.watch('src/**/*.less',gulp.series('less'));
